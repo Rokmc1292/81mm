@@ -10,20 +10,17 @@
 # 출력
 # 첫째 줄부터 N개의 줄에 오름차순으로 정렬한 결과를 한 줄에 하나씩 출력한다.
 
-N = int(input())
-if N < 1 or N > 1000000:
-  raise NotImplementedError
+import sys
+N = int(sys.stdin.readline())
 
 number_list=[]
 
-for i in range(0,N):
-  number = int(input())
-  if number < -1000000 or number > 1000000:
-    raise NotImplementedError
-  else:
-    number_list.append(number)
-    
+for i in range(N):
+  number = int(sys.stdin.readline())
+  number_list.append(number)
+
 number_list.sort()
 
-for i in range(0,N):
-  print(number_list[i])
+for i in number_list:
+  sys.stdout.write(str(i) + "\n")
+  
